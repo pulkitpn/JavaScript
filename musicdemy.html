@@ -1,0 +1,171 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Music Academy</title>
+    <style>
+        .jumbotron {
+            background-image: linear-gradient(to right, #9c7070, #f4e2d8);
+        }
+
+        body {
+            background-image: linear-gradient(to right, #f4e2d8, #c5a9a9);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="jumbotron text-center">
+            <h1>Music Academy</h1>
+        </div>
+    </div>
+    <div class="container register-form">
+        <div class="form-content">
+            <form class="validate">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p>Name: <input id="name" type="text" placeholder="Enter name" required pattern="[A-Za-z]+"></p>
+                        <br>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <p>Age:
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+                                id="age" type="number" placeholder="Enter your age" required></p> <br>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <p>Gender:
+                            Male <input type="radio"  id="gender" name="sex" required>
+                            Female <input type="radio" id="gender" name="sex">
+                        </p> <br>
+                    </div>
+                    <br>
+                    <div class="col-sm-6">
+
+                        <p>Phone Number: <input id="phone" type="text" placeholder="Enter your 10-digit number" required
+                                pattern="[0-9].{9}"></p>
+
+                    </div>
+                    <br>
+                    <div class="col-sm-6">
+                        <p>E-mail: <input id="email" type="email" placeholder="Enter your e-mail address" required></p>
+                        <br>
+                    </div>
+                    <br>
+                    <div class="col-sm-6">
+                        <p>Instruement/Vocals:
+                            Singing: <input id="voc" type="checkbox" required>
+                            Guitar: <input id="voc" type="checkbox">
+                            Keyboard: <input id="voc" type="checkbox">
+                            Drums: <input id="voc" type="checkbox">
+                            Tabla: <input id="voc" type="checkbox">
+                        </p>
+                    </div>
+                    <br>
+                    <div class="col-sm-6">
+                        <p>Date of joining: <input type="date" required></p>
+                    </div>
+                    <br>
+                    <div class="col-sm-6">
+                        <p>Payment mode:
+                            Online: <input type="radio" id="pay" name="pay" required>
+                            Offline: <input type="radio" id="pay" name="pay">
+                        </p> <br>
+                    </div>
+                    <div class="col-sm-6">
+                        <p>Need Demo class: Yes:<input type="radio" id="demo" name="demo" required> NO:<input type="radio" id="demo" name="demo"></p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p>Have own instruement: Yes:<input type="radio" id="ins" required> NO:<input type="radio" id="ins" ></p>
+                    </div>
+                    <div class="col-sm-6"><button class="btn-success" type="submit" onclick="myFunction()" value="Submit"
+                            name="Submit">Submit</button></div>
+                    <div class="col-sm-6"><button class="btn-danger" type="reset" value="Reset"
+                            name="Reset">Reset</button></div>
+                </div>
+        </div>
+        </form>
+    </div>
+    </div>
+
+    <script>
+
+        
+        
+            /* validate name */
+            const name = document.getElementById("name");
+            name.addEventListener("input", () => {
+                name.setCustomValidity("");
+                name.checkValidity();
+            });
+            name.addEventListener("invalid", () => {
+                if (name.value === "") {
+                    name.setCustomValidity("Please enter a name");
+                }
+                else {
+                    name.setCustomValidity("Enter the correct name in characters");
+                }
+            });
+
+            /*validate email */
+            const email = document.getElementById("email");
+            email.addEventListener("input", () => {
+                email.setCustomValidity("");
+                email.checkValidity();
+            });
+            email.addEventListener("invalid", () => {
+                if (email.value === "") {
+                    email.setCustomValidity("Please enter a email id");
+                }
+                else {
+                    email.setCustomValidity("Enter valid mail id");
+                }
+            });
+
+            const radiobttn = document.getElementById("gender");
+            radiobttn.addEventListener("input",() =>{
+                radiobttn.setCustomValidity("");
+                radiobttn.checkValidity();
+            })
+
+            /* validate age */
+            const age = document.getElementById("age");
+            age.addEventListener("input", () => {
+                age.setCustomValidity("");
+                age.checkValidity();
+            });
+            age.addEventListener("invalid", () => {
+                if (age.value === "") {
+                    age.setCustomValidity("Please enter an Age");
+                } else {
+                    age.setCustomValidity("Enter a Valid age");
+                }
+            });
+
+
+            /* validate phone no */
+            const phone = document.getElementById("phone");
+            phone.addEventListener("input", () => {
+                phone.setCustomValidity("");
+                phone.checkValidity();
+            });
+            phone.addEventListener("invalid", () => {
+                if (phone.value === "") {
+                    phone.setCustomValidity("Please enter a Phone Number");
+                } else {
+                    phone.setCustomValidity("Enter a Valid Phone number");
+                }
+            });
+    </script>
+
+</body>
+
+</html>
