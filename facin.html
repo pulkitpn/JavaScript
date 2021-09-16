@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<body>
+    <script>
+        function createBikes(bikeName, mileage, cc, fuel) {
+            return {
+                bikeName: bikeName,
+                mileage: mileage,
+                cc: cc,
+                fuel: fuel,
+                getBikeDetail() {
+                    return "Bike Name: " + bikeName + "</br>" +
+                        "Mileage: " + mileage + "</br>" +
+                        "Engine CC: " + cc + "</br>" +
+                        "Fuel type: " + fuel + "</br>" +
+                        "-----------------------------------------------------------------" + "</br>"
+                }
+            }
+        }
+
+
+        var bike1 = createBikes("Pulsar 250", "40 kmpl", "250cc", "Petrol");
+        var bike2 = createBikes("Ninja 300", "26 kmpl", "300cc", "Petrol");
+        var bike3 = createBikes("Dominar 400", "27 kmpl", "400cc", "Petrol");
+
+        function inputusr() {
+            var option = parseInt(prompt("Enter the no. of Bike that you want to see: 1.) Pulsar  2.) Ninja  3.) Dominar  4.) All Bikes"));
+            if(option==1)
+                document.write(bike1.getBikeDetail());
+            else if(option==2)
+                document.write(bike2.getBikeDetail());
+            else if(option==3)
+                document.write(bike3.getBikeDetail());
+            else if(option==4)
+                document.write(bike1.getBikeDetail());
+                document.write(bike2.getBikeDetail());
+                document.write(bike3.getBikeDetail());
+        }
+
+        var passphrase = 'hello@pn';
+        ch = prompt('Enter 1 for login OR Enter 2 to cancel');
+        if (ch == 1)
+            login();
+        else
+            cancel();
+        function login() {
+            var passenter = prompt('Enter the password');
+            function passverify() {
+                if (passenter == passphrase) {
+                    alert("Welcome Pulkit");
+                    inputusr();
+                }
+                else {
+                    alert('Sorry!!!.' + '</br>' + 'Login failed.......Try again');
+                }
+            }
+            passverify()
+        }
+
+
+    </script>
+
+</body>
+
+</html>
