@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+    <head> <h1>Inventory</h1></head> </br>
+    <body>
+        <script>
+            class College{
+                constructor(deptName,hod,labs,classrooms){
+                    this.name=deptName;
+                    this.hod=hod;
+                    this.labs=labs;
+                    this.classrooms=classrooms;
+                    this.show = function() {
+                        return "RVCE Bengalore"
+                    }
+                    
+
+                }
+                display() {
+                        return "Karnataka"
+                    }
+            }
+            
+            
+            var dept1 = new College("MCA","abc",11,15);
+            var dept2 = new College("MTECH CS","xyz",9,17);
+            var dept3 = new College("Civil","Mno",10,12);
+            var dept4 = new College("BE Mechanical","Pqr",7,13);
+            var dept5 = new College("E and C","Stu",12,10);
+            
+            document.write("DepartmentName:"+dept1.name + "</br>" + 
+                            "HOD:"+dept1.hod + "</br>" + 
+                            "No of Labs:"+dept1.labs  + "</br>" + 
+                            "No of Classrooms:" +dept1.classrooms + "</br>" + 
+                            "College:"+dept1.show() + "</br>" + 
+                            "State:"+dept1.display()+ "</br>" +
+                            "-----------------------------------------------------------------------------------------------------" + "</br>");
+            document.write("DepartmentName:"+dept2.name + "</br>" + 
+                            "HOD:"+dept2.hod + "</br>" + 
+                            "No of Labs:"+dept2.labs + "</br>" + 
+                            "No of Classrooms:" +dept2.classrooms  + "</br>" + 
+                            "College:"+dept2.show() + "</br>" + 
+                            "State:"+dept1.display()+ "</br>" +
+                            "-----------------------------------------------------------------------------------------------------" + "</br>");
+            document.write("DepartmentName:"+dept3.name + "</br>" + 
+                            "HOD:"+dept3.hod + "</br>" + 
+                            "No of Labs:"+dept3.labs + "</br>" + 
+                            "No of Classrooms:" +dept3.classrooms  + "</br>" + 
+                            "College:"+dept3.show() + "</br>" + 
+                            "State:"+dept1.display()+ "</br>" +
+                            "-----------------------------------------------------------------------------------------------------" + "</br>");
+            document.write("DepartmentName:"+dept4.name + "</br>" + 
+                            "HOD:"+dept4.hod + "</br>" + 
+                            "No of Labs:"+dept4.labs + "</br>" + 
+                            "No of Classrooms:" +dept4.classrooms  + "</br>" + 
+                            "College:"+dept4.show() + "</br>" + 
+                            "State:"+dept1.display()+ "</br>" +
+                            "-----------------------------------------------------------------------------------------------------" + "</br>");
+            document.write("DepartmentName:"+dept5.name + "</br>" + 
+                            "HOD:"+dept5.hod + "</br>" + 
+                            "No of Labs:"+dept5.labs + "</br>" + 
+                            "No of Classrooms:" +dept5.classrooms  + "</br>" + 
+                            "College:"+dept5.show() + "</br>" + 
+                            "State:"+dept1.display()+ "</br>" +
+                            "-----------------------------------------------------------------------------------------------------" + "</br>");
+
+        </script>
+    </body>
+
+
+</html>
