@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+    <body>
+        <script>
+            function createBikes(bikeName,mileage,cc,fuel){
+                return{
+                    bikeName: bikeName,
+                    mileage: mileage,
+                    cc: cc,
+                    fuel: fuel,
+                    getBikeDetail() {
+                        return "Bike Name: "+bikeName+"</br>"+
+                        "Mileage: "+mileage+"</br>"+
+                        "Engine CC: "+cc+"</br>"+
+                        "Fuel type: "+fuel+"</br>"+
+                        "-----------------------------------------------------------------"+"</br>"
+                    }
+                }
+            }
+
+            let bike1 = createBikes("Pulsar 250","40 kmpl","250cc","Petrol");
+            let bike2 = createBikes("Ninja 300","26 kmpl","300cc","Petrol");
+            let bike3 = createBikes("Dominar 400","27 kmpl","400cc","Petrol");
+            
+            document.write(bike1.getBikeDetail());
+            document.write(bike2.getBikeDetail());
+            document.write(bike3.getBikeDetail());
+        </script>
+
+    </body>
+</html>
